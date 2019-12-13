@@ -12,7 +12,7 @@ import javax.swing.border.EmptyBorder;
 import AP_Exam.AP_Console;
 
 
-import AP_Exam.encapsulationQuestions;
+
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -71,18 +71,9 @@ public class AP_UI extends MenuControl
 		btnMath.setBounds(18, 21, 91, 29);
 		contentPane.add(btnMath);
 		
-		JButton btnEncapsulation = new JButton("Encapsulation");
-		btnEncapsulation.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AP_Exam.encapsulationQuestions q = new AP_Exam.encapsulationQuestions();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices());
-				testQuestionAnswer.setText(q.getAnswer());
-			} 
-		}); 
 		
-		btnEncapsulation.setBounds(609, 320, 110, 20);
-		contentPane.add(btnEncapsulation);
+		
+		
 		
 		JButton btnDataTypes = new JButton("Data Types");
 		btnDataTypes.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
@@ -139,17 +130,7 @@ public class AP_UI extends MenuControl
 		
 
 	
-		JButton btnAnthonyjude = new JButton("BooleanQuestions");
-		btnAnthonyjude.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AP_Exam.Question q = new AP_Exam.BooleanQuestions();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices("k"));
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
-		btnAnthonyjude.setBounds(604, 226, 117, 29);
-		contentPane.add(btnAnthonyjude);
+		
 		
 		JButton Power = new JButton("Power");
 		Power.addActionListener(new ActionListener() {
@@ -198,19 +179,7 @@ public class AP_UI extends MenuControl
 		});
 		contentPane.add(btnNewButton_1);
 		
-		//Anika and Aashi's arraylist questions
-		JButton btnArraylist_2 = new JButton(" ArrayList 2");
-		btnArraylist_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) 
-			{
-				AP_Exam.Question q = new AP_Exam.ListQuestions2();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices());
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
-		btnArraylist_2.setBounds(453, 316, 138, 29);
-		contentPane.add(btnArraylist_2);
+		
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(16, 62, 418, 204);
@@ -228,17 +197,8 @@ public class AP_UI extends MenuControl
 		testChoices.setEditable(false);
 		testChoices.setLineWrap(true);
 		
-		JButton btnPolymorphism = new JButton("Polymorphism");
-		btnPolymorphism.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				AP_Exam.Question q = new AP_Exam.PolymorphismQuestions();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices());
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
-		btnPolymorphism.setBounds(604, 157, 137, 28);
-		contentPane.add(btnPolymorphism);
+		
+		
 		
 		JButton btnNewButton_2 = new JButton("Polymorph");
 		btnNewButton_2.addActionListener(new ActionListener() {
