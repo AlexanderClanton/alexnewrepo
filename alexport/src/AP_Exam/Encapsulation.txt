@@ -1,0 +1,26 @@
+@question1
+question: What is encapsulation?
+choiceA: It is a way of combining various data members into a single unit
+choiceB: It is a way of combining various member functions into a single unit
+choiceC: It is a way of combining various data members and member functions into a single unit which can oaperate on any data
+choiceD: It is a way of combining various data members and member functions that operate on those16 data members into a single unit
+rightAnswer: C
+@end
+
+@question2
+question: If data members are private, what can we do to access them from the class object?
+choiceA: Create public methods to access those data members
+choiceB: Create private member methods to access those data members
+choiceC: Create protected member methods to access those data members
+choiceD: Private data members can never be accessed from outside the class
+rightAnswer: A
+@end
+
+@question3
+question: Which feature can be implemented using encapsulation?
+choiceA: Inheritance
+choiceB: Abstraction
+choiceC: Polymorphism
+choiceD: Overloading
+rightAnswer: B
+@end
