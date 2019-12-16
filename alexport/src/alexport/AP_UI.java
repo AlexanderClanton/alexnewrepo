@@ -150,34 +150,9 @@ public class AP_UI extends MenuControl
 		
 		
 		
-		JButton btnPowandsqrt = new JButton("PowAndSqrt");
-		btnPowandsqrt.setBounds(603, 191, 138, 29);
-		contentPane.add(btnPowandsqrt);
-		btnPowandsqrt.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AP_Exam.Question q = new AP_Exam.PowSqrt();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices());
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
+		
 
 
-		JButton btnNewButton_1 = new JButton(""); //the button
-		btnNewButton_1.setBorder(null);
-		btnNewButton_1.setIcon(new ImageIcon("recursion-button.jpg"));
-		btnNewButton_1.setBounds(453, 351, 175, 61);
-		btnNewButton_1.addActionListener(new ActionListener() 
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				AP_Exam.Question q = new AP_Exam.Recursion();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices());
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
-		contentPane.add(btnNewButton_1);
 		
 		
 		
@@ -200,17 +175,6 @@ public class AP_UI extends MenuControl
 		
 		
 		
-		JButton btnNewButton_2 = new JButton("Polymorph");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AP_Exam.Question q = new AP_Exam.Polymorph();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices());
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
-		btnNewButton_2.setBounds(635, 21, 91, 29);
-		contentPane.add(btnNewButton_2);
 
 	}
 }
