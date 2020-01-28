@@ -1,4 +1,4 @@
-package Util;
+package alexport;
 
 /**
  * Evaluates String as palindrome
@@ -7,7 +7,7 @@ package Util;
  * Contains 3 methods of evaluation: Loop, Recursion, Built in replace and compare
  * 
  * @version 1.0
- * @author John Mortensen
+ * @author Alex
  */
 
 public class Palindrome

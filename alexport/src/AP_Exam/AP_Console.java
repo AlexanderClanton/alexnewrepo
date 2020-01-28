@@ -68,28 +68,7 @@ public class AP_Console
         swValue = ConsoleMethods.inputInt(" Select option: ");
     
         // Switch construct
-        switch (swValue) 
-        {
-            case 1:
-              menuMsg[1] = MathQuestions.mainTest();
-              menuTotalMsg = Scoring.getCounterTotalMsg();
-              break;
-            case 2:
-              menuMsg[2] = BinaryMathQuestions.mainTest();
-              menuTotalMsg = Scoring.getCounterTotalMsg();
-              break;
-            case 3:
-              menuMsg[3] = DataTypeQuestions.mainTest();
-              menuTotalMsg = Scoring.getCounterTotalMsg();
-              break;
-            case 0:
-              ConsoleMethods.println("Exit selected");
-              running = false;
-              break;
-            default:
-              ConsoleMethods.println("Invalid selection");
-        }
-    }
+            }
   }
 }
 

@@ -9,6 +9,9 @@ import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+
+
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -78,30 +81,52 @@ public class MenuControl extends JFrame {
 		});
 		mnApTest.add(mntmApReview);
 		
-		JMenu mnIntro = new JMenu("Intro");
-		menuBar.add(mnIntro);
-		
-		JMenuItem mntmOriginal = new JMenuItem("Jumpers");
-		mnIntro.add(mntmOriginal);
-		
-		JMenuItem mntmInputs = new JMenuItem("Pythagorean");
-		mnIntro.add(mntmInputs);
-		
-		JMenu mnLabs = new JMenu("Labs");
-		menuBar.add(mnLabs);
+		JMenu mnNewMenu = new JMenu("Sprint 1");
+		mnNewMenu.setBackground(Color.WHITE);
+		menuBar.add(mnNewMenu);
 		
 		JMenuItem mntmShorthand = new JMenuItem("Shorthand");
-		mnLabs.add(mntmShorthand);
-		/*
-		JMenuItem mntmPalindrom = new JMenuItem("Palindrom 3");
-		mntmPalindrom.addActionListener(new ActionListener() {
+		mntmShorthand.setBackground(Color.PINK);
+		mntmShorthand.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PalindromeUI frame = new PalindromeUI();
-				frame.setVisible(true);			
+				ShortHand shorthand = new ShortHand();
+				shorthand.add();				
 			}
 		});
-		mnLabs.add(mntmPalindrom);
-		*/
+		mnNewMenu.add(mntmShorthand);
+		
+		JMenuItem mntmPigLatin = new JMenuItem("PigLatin");
+		mntmPigLatin.setBackground(Color.YELLOW);
+		mntmPigLatin.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+                PigLatin pigLatin = new PigLatin();
+                pigLatin.run();
+            }
+        });
+		mnNewMenu.add(mntmPigLatin);
+		
+		
+		
+		
+		
+		JMenuItem mntmPalindromeRev = new JMenuItem("Palindrome ReverseString");
+		mntmPalindromeRev.setBackground(Color.LIGHT_GRAY);
+		mntmPalindromeRev.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                PalindromeRev palindromeRev = new PalindromeRev();
+                palindromeRev.check();
+            }
+        });
+		mnNewMenu.add(mntmPalindromeRev);
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		JMenu mnJig = new JMenu("Jigsaw");
 		menuBar.add(mnJig);
 		

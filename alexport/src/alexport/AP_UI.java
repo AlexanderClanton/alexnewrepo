@@ -1,6 +1,7 @@
 package alexport;
 
 import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -12,12 +13,12 @@ import javax.swing.border.EmptyBorder;
 import AP_Exam.AP_Console;
 
 
-
-
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
+
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JSeparator;
@@ -58,48 +59,13 @@ public class AP_UI extends MenuControl
 		lblExamSections.setBounds(18, 6, 91, 16);
 		contentPane.add(lblExamSections);
 		
-		JButton btnMath = new JButton("Math");
-		btnMath.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
-		btnMath.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AP_Exam.Question q = new AP_Exam.MathQuestions();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices()); 
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
-		btnMath.setBounds(18, 21, 91, 29);
-		contentPane.add(btnMath);
 		
 		
 		
 		
 		
-		JButton btnDataTypes = new JButton("Data Types");
-		btnDataTypes.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
-		btnDataTypes.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AP_Exam.Question q = new AP_Exam.DataTypeQuestions();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices());
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
-		btnDataTypes.setBounds(264, 21, 101, 29);
-		contentPane.add(btnDataTypes);
 		
-		JButton btnBinaryMath = new JButton("Binary Math");
-		btnBinaryMath.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
-		btnBinaryMath.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				AP_Exam.Question q = new AP_Exam.BinaryMathQuestions();
-				testQuestion.setText(q.getQuestion());
-				testChoices.setText(q.getChoices());
-				testQuestionAnswer.setText(q.getAnswer());
-			}
-		});
-		btnBinaryMath.setBounds(144, 21, 101, 29);
-		contentPane.add(btnBinaryMath);
+	
 		
 		JButton btnConsole = new JButton("C");
 		btnConsole.addActionListener(new ActionListener() {
@@ -125,8 +91,6 @@ public class AP_UI extends MenuControl
 		testQuestionAnswer.setEditable(false);
 		testQuestionAnswer.setLineWrap(true);
 		
-		
-
 		
 
 	

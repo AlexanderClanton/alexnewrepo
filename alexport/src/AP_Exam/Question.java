@@ -1,9 +1,9 @@
 package AP_Exam;
 
+import org.apache.log4j.*;
 import java.util.Random;
 
 import Util.ConsoleMethods;	// Console support
-
 /**
  * Question class is intended to support asking question on test
  *
@@ -12,6 +12,11 @@ import Util.ConsoleMethods;	// Console support
  */
 public class Question extends Scoring
 {
+	
+
+	
+	static final String path = "hash/resources/log4j.properties";
+	//static Logger log4j = Logger.getLogger(Question.class);
 	// question setup values
 	protected String question, choiceA, choiceB, choiceC, choiceD, choiceE, answer;
 	protected char answerKey;
@@ -32,7 +37,21 @@ public class Question extends Scoring
      * 
      * @param  void
      */
-    public Question()
+	public static void main(String[] args) 
+	
+	{
+		/*
+        PropertyConfigurator.configure(path);
+        log4j.debug("Sample debug message");
+        log4j.info("Sample info message");
+        log4j.warn("Sample warn message");
+        log4j.error("Sample error message");
+        log4j.fatal("Sample fatal message");
+    	*/
+    }
+
+	
+	public Question()
     {
     	// This outputs constructor being run
         ConsoleMethods.println("Question class constructor");
