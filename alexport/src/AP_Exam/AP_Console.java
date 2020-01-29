@@ -25,7 +25,7 @@ import Util.ConsoleMethods;
  *      viii)   MidTermTest will randomize test execution and problem execution to ensure learing
  *              is thorough, versus simple memorizing the answers
  *
- * @authors John Mortensen
+ * @authors alex  c
  * @version 1.0
  * @created    August 29, 2019
  */
@@ -39,7 +39,7 @@ public class AP_Console
    *
    * @param  args  The command line arguments
    */
-  public static void main()
+	public static void main(String[] args) 
   {
     // BlueJ clear console command
     ConsoleMethods.clearScreen();

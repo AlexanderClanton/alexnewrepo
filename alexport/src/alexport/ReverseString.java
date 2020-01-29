@@ -1,7 +1,10 @@
 package alexport;
 
 public class ReverseString {
-    static String reverseString(String string)
+    
+	
+
+	static String reverseString(String string)
     {
         StringBuffer bufferString = new StringBuffer(string);
         bufferString.reverse();

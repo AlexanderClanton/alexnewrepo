@@ -40,23 +40,26 @@ public class ConsoleMethods {
 	   System.out.println(txt);
    }
    
-   public static void printPrompt(String prompt) {
+   public static void printPrompt(String prompt) 
+   {
 	    print(prompt + " ");
 	    System.out.flush();
-	  }
+	}
    
-   public static String inputString(String prompt) {
+   public static String inputString(String prompt) 
+   {
 	    //inputFlush();
 	    printPrompt(prompt);
 	    return inString();
-	  }
+	}
 
    private static String inString() {
 	   int aChar;
 	   String s = "";
 	   boolean finished = false;
 
-	   while (!finished) {
+	   while (!finished) 
+	   {
 		   try {
 			   aChar = System.in.read();
 			   if (aChar < 0 || (char) aChar == '\n')

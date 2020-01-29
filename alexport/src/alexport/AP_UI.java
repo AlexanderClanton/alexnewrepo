@@ -70,7 +70,7 @@ public class AP_UI extends MenuControl
 		JButton btnConsole = new JButton("C");
 		btnConsole.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				AP_Console.main();
+				AP_Console.main(null);
 			}
 		});
 		btnConsole.setForeground(Color.RED);

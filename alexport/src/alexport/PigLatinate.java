@@ -3,8 +3,13 @@ package alexport;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.regex.*;
-public class PigLatinate {
-    static boolean noVowelCheck(String word)
+
+
+
+public class PigLatinate 
+{
+	
+		static boolean noVowelCheck(String word)
     {
         if (
             !word.toLowerCase().contains("a".toLowerCase()) &&
@@ -18,7 +23,7 @@ public class PigLatinate {
             return false;
         }
     }
-        
+	   
     static boolean startVowelCheck(String word)
     {
         char firstChar = Character.toLowerCase(word.charAt(0));
