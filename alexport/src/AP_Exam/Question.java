@@ -6,7 +6,7 @@ import java.util.Random;
 import Util.ConsoleMethods;	// Console support
 /**
  * Question class is intended to support asking question on test
- *
+ *liuol
  * @author (John Mortensen)
  * @version (1.0)
  */
