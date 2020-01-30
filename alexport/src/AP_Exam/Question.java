@@ -1,6 +1,6 @@
 package AP_Exam;
 
-import org.apache.log4j.*;
+
 import java.util.Random;
 
 import Util.ConsoleMethods;	// Console support
