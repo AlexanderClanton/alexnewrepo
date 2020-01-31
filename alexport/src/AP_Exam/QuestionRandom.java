@@ -7,7 +7,7 @@ import Util.ConsoleMethods;	// Console support
 /**
  * QuestionRandom class is intended to support asking question on test by randomizing order
  *
- * @author (John Mortensen)
+ * @author alex
  * @version (1.0)
  */
 public class QuestionRandom extends Question

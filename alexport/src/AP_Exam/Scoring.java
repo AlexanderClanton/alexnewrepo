@@ -2,7 +2,7 @@ package AP_Exam;
 /**
  * Keeps score
  *
- * @author (John Mortensen)
+ * @author alex c
  * @version (1.0 Eclipse)
  */
 abstract class Scoring

@@ -2,18 +2,20 @@ package AP_Exam;
 
 
 import java.util.Random;
+import java.util.logging.*;
 
 import Util.ConsoleMethods;	// Console support
+
 /**
  * Question class is intended to support asking question on test
  *liuol
- * @author (John Mortensen)
+ * @author alex c
  * @version (1.0)
  */
 public class Question extends Scoring
 {
 	
-
+	private final static Logger LOGGER= Logger.getLogger(Question.class.getName());
 	
 	static final String path = "hash/resources/log4j.properties";
 	//static Logger log4j = Logger.getLogger(Question.class);
@@ -54,8 +56,22 @@ public class Question extends Scoring
 	public Question()
     {
     	// This outputs constructor being run
-        ConsoleMethods.println("Question class constructor");
-        
+        //ConsoleMethods.println("Question class constructor");
+		LOGGER.info("Info Print: "+LOGGER.getName());
+    	//ConsoleMethods.println("Question class constructor");
+    	 
+    	 LOGGER.warning("Can cause ArrayIndexOutOfBoundsException");
+         
+         //An array of size 3
+         int []a = {1,2,3};
+         int index = 4;
+         LOGGER.config("index is set to "+index);
+          
+         try{
+             System.out.println(a[index]);
+         }catch(ArrayIndexOutOfBoundsException ex){
+             LOGGER.log(Level.SEVERE, "Exception occur", ex);
+         }
         // turn scrambled off for backward compatibility
         choiceOffset = 0;
         choiceEfixed = true;  
