@@ -6,8 +6,12 @@ public class linkedlistA
 {
 	BookN head;
 	
+	
+	//node called BookN
 	class BookN
 		{
+			
+		//properties
 			String Name="";
 			String Title="";
 			int pagenum=0;
@@ -18,9 +22,9 @@ public class linkedlistA
 		
 		}	
 	
-	
-		
-	 public void push(String N, String T, int p) 
+	 
+	//push on top
+	public void push(String N, String T, int p) 
 	    { 
 	     
 	        BookN new_Node = new BookN(N,T,p); 
@@ -36,67 +40,16 @@ public class linkedlistA
 	        head = new_Node; 
 	    } 
 	  
-	   
-	    public void InsertAfter(BookN prev_Node,String N, String T, int p ) 
-	    { 
-	  
-	      
-	        if (prev_Node == null) { 
-	            System.out.println("The given previous node cannot be NULL "); 
-	            return; 
-	        } 
-	  
-	     
-	        BookN new_node = new BookN(N,T,p); 
-	  
-	        new_node.next = prev_Node.next; 
-	  
-	    
-	        prev_Node.next = new_node; 
-	  
-	    
-	        new_node.prev = prev_Node; 
-
-	        if (new_node.next != null) 
-	            new_node.next.prev = new_node; 
-	    } 
-	  
-	    void append(String N, String T, int p) 
-	    { 
-
-	       BookN new_node = new BookN(N,T,p); 
-	  
-	        BookN last = head;
-	  
-
-	        new_node.next = null; 
-	  
-	        if (head == null) { 
-	            new_node.prev = null; 
-	            head = new_node; 
-	            return; 
-	        } 
-	  
-	        while (last.next != null) 
-	            last = last.next; 
-	  
-	        
-	        last.next = new_node; 
-	  
-	        new_node.prev = last; 
-	    }
 	
-	
-	
-	
+	    //print tail and beginning
 	    public void printlist(BookN node) 
 	    { 
 	        BookN last = null; 
 	        System.out.println("Traversal in forward Direction"); 
 	        while (node != null) { 
-	            System.out.println(node.Name);
-	            System.out.println(node.Title);
-	            System.out.println(node.pagenum);
+	            System.out.println("Name: "+node.Name);
+	            System.out.println("Title: " +node.Title);
+	            System.out.println("Page: " +node.pagenum);
 	            last = node; 
 	            node = node.next; 
 	        } 
@@ -104,14 +57,12 @@ public class linkedlistA
 	        System.out.println("Traversal in reverse direction"); 
 	        while (last != null) { 
 
-	        	System.out.println(last.Name);
-	            System.out.println(last.Title);
-	            System.out.println(last.pagenum);
+	        	System.out.println("Name: " +last.Name);
+	            System.out.println("Title: "+last.Title);
+	            System.out.println("Page: " +last.pagenum);
 	            last = last.prev; 
 	        } 
 	    }
-	
-	
 	
 
 		public static void main(String args[])
@@ -122,7 +73,9 @@ public class linkedlistA
 			String Title;
 			int page;
 			int loop=1;
-			
+			int x;
+			int counter=0;
+			//add until user is done
 			while(loop==1)
 			{
 				
@@ -140,14 +93,55 @@ public class linkedlistA
 				System.out.println("Current List");
 					b.printlist(b.head);
 			
+					counter++;
 			}
 			
-			
+			//print
+			System.out.println("");
 			System.out.println("Final!!!");
 			b.printlist(b.head);
 		
-		
+
+			
+			//delete node
+			for(x=0;x<counter;x++)
+			{
+				b.dNode(b.head, b.head);
+				
+			}
+			b.printlist(b.head);
+			System.out.println("Bye bye");
+			
 		}
 
-	
+
+		//deletes nodes
+		void dNode(BookN head_ref, BookN del) 
+	    { 
+	  
+	       
+	        if (head == null || del == null) { 
+	            return; 
+	        } 
+	  
+
+	        if (head == del) { 
+	            head = del.next; 
+	        } 
+	  
+	       
+	        if (del.next != null) { 
+	            del.next.prev = del.prev; 
+	        } 
+	  
+	   
+	        if (del.prev != null) { 
+	            del.prev.next = del.next; 
+	        } 
+	  
+	       
+	        return; 
+	    } 
+
+
 }
