@@ -4,13 +4,40 @@ package model_linkedlists;
  *
  */
 
+
+class BookN
+{
+	String Name="";
+	String Title="";
+	int pagenum=0;
+	
+	
+	BookN(BookN ob)
+	{
+		Name=ob.Name;
+		Title =ob.Title;
+		pagenum=ob.pagenum;
+	}
+	
+
+
+}
+
+
+
+
+
 public class LinkedList
 {
    private Object opaqueObject;
    private LinkedList prevNode;
    private LinkedList nextNode;
+   
+   
 
-  /**
+	
+   
+   /**
    *  Constructs a new element with object objValue,
    *  followed by object address
    *
@@ -21,6 +48,28 @@ public class LinkedList
 	setObject(opaqueObject);
 	setPrevNode(node);
 	setNextNode(null);
+  
+	BookN ob = new BookN(null);
+	String loop="";
+	
+	while(loop!="y")
+	{
+		
+
+		//ob.Title=ConsoleMethods.inputString("Enter your book title");
+		//ob.Name=ConsoleMethods.inputString("Enter your book Name");
+		//ob.pagenum=ConsoleMethods.inputInt("Enter your page numbers");
+	
+		
+		
+		
+	}
+  
+  
+  
+  
+  
+  
   }
 
   /**
