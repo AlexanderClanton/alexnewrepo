@@ -121,9 +121,9 @@ public class linkedlistA
 			String Name;
 			String Title;
 			int page;
-			String loop="y";
+			int loop=1;
 			
-			while(loop=="y")
+			while(loop==1)
 			{
 				
 				Title=ConsoleMethods.inputString("Enter your book title");
@@ -132,12 +132,18 @@ public class linkedlistA
 				
 				b.push(Name, Title, page);
 				
-				System.out.println("Enter n to stop");
-				loop= myObj.nextLine();	
+				System.out.println("Enter 1 to continue");
+				loop= myObj.nextInt();	
 				
+			
+			
+				System.out.println("Current List");
+					b.printlist(b.head);
+			
 			}
 			
 			
+			System.out.println("Final!!!");
 			b.printlist(b.head);
 		
 		
