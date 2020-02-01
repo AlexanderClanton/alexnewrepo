@@ -85,7 +85,8 @@ public class Question extends Scoring
      */
      protected void setupQuestion() {
     	// This outputs constructor being run
-        ConsoleMethods.println("Question class setupQuestion method");
+    	 LOGGER.info("Info Print: "+LOGGER.getName());
+    	 //ConsoleMethods.println("Question class setupQuestion method");
     	setupQuestionData();
         
     	// choice assignment
@@ -105,7 +106,8 @@ public class Question extends Scoring
      
     protected void setupQuestionData() {
     	// This outputs constructor being run
-        ConsoleMethods.println("BobaQuestions class setupQuestionData method");
+    	LOGGER.info("Info Print: "+LOGGER.getName());
+    	//ConsoleMethods.println("BobaQuestions class setupQuestionData method");
         
     	question = "What type of programming language is Java?";
 		choiceA = "Data-oriented";
