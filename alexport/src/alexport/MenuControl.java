@@ -105,8 +105,16 @@ public class MenuControl extends JFrame {
         });
 		mnNewMenu.add(mntmPigLatin);
 		
-		
-		
+		JMenuItem mntmCupcakeUI= new JMenuItem("QUELIST");
+		mntmCupcakeUI.setBackground(Color.RED);
+		mntmCupcakeUI.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CupcakeUI listD = new CupcakeUI();
+				listD.setVisible(true);
+				
+			}
+		});
+		mnNewMenu.add(mntmCupcakeUI);
 		
 		
 		JMenuItem mntmPalindromeRev = new JMenuItem("Palindrome ReverseString");
